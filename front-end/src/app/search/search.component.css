@@ -1,0 +1,47 @@
+.search-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background: url(../../assets/images/background.jpg) #dae0e5;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 15px;
+}
+.list-all {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 20px;
+  color: #007bff;
+  cursor: pointer;
+}
+.list-all:hover {
+  border-bottom: 2px solid #007bff;
+}
+.title {
+  font-size: 50px;
+  line-height: 1;
+  color: #0a3a73;
+  font-weight: bold;
+}
+.search-form {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 50px 60px;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+.search-form input {
+  padding: 10px 15px;
+  font-size: 20px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.search-form button {
+  font-size: 25px;
+  margin-top: 10px;
+}

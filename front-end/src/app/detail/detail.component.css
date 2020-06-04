@@ -1,0 +1,135 @@
+.jobs-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.loader-container {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  z-index: 1048;
+  background-color: #404040;
+  opacity: 0.8;
+  touch-action: none;
+}
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #003aa7;
+  width: 120px;
+  height: 120px;
+  opacity: 1;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+.back-search {
+  font-size: 20px;
+  color: #007bff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.back-search:hover {
+  border-bottom: 2px solid #007bff;
+}
+.list-all {
+  font-size: 20px;
+  color: #007bff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.list-all:hover {
+  border-bottom: 2px solid #007bff;
+}
+.title {
+  font-size: 50px;
+  line-height: 1;
+  color: #0a3a73;
+  font-weight: bold;
+  text-align: center;
+}
+.location {
+  font-size: 30px;
+  line-height: 1;
+  color: #0a3a73;
+  text-align: center;
+  margin-top: 20px;
+}
+.no-data {
+  font-size: 28px;
+  margin-top: 40px;
+  text-align: center;
+}
+.related-job {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.company-logo {
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 10px;
+  border-radius: 10px;
+}
+.company-logo img {
+  width: 280px;
+}
+.job-content {
+  padding: 0px 10px;
+}
+
+.job-content .company-name {
+  font-size: 35px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #312e30;
+}
+
+.job-content .type {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.job-content .description {
+  padding-left: 10px;
+}
+.apply-btn button {
+  width: 140px;
+  margin-top: 65px;
+}

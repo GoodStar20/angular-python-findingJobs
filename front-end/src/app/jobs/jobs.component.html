@@ -1,0 +1,30 @@
+<div class="jobs-page">
+  <div class="back-search" (click)="backSearch()">
+    Back to Search
+  </div>
+  <div class="container-fluid">
+    <div class="title" *ngIf="!searchData.title">
+      All Jobs
+    </div>
+    <div class="title" *ngIf="searchData.title">
+      Search Results
+    </div>
+    <div class="row">
+      <div *ngFor="let result of resultData" class="col-md-4">
+        <div *ngIf="result.uuid" class="card bg-light text-dark card-shaow" (click)="detailJobs(result.uuid)">
+          <div class="card-body">
+            <div class="job-title" *ngIf="!searchData.title">
+              {{result.title}}
+            </div>
+            <div class="job-title" *ngIf="searchData.title">
+              {{result.suggestion}}
+            </div>
+            <div *ngIf="location" class="location">
+              {{searchData.location}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

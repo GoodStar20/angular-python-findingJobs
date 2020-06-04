@@ -1,0 +1,59 @@
+<div class="jobs-page">
+  <div class="container-fluid" *ngIf="resultData.jobTitle; else loading_bar">
+    <div class="row header">
+      <div class="col-md-2 text-left mt-2">
+        <span class="back-search" (click)="backSearch()">
+          Back to Search
+        </span>
+      </div>
+      <div class="col-md-8 text-center">
+        <div class="title" *ngIf="resultData.jobTitle">
+          {{resultData.jobTitle}} Jobs
+        </div>
+        <div class="location">
+          {{searchData.location}}
+        </div>
+      </div>
+      <div class="col-md-2 text-right mt-2">
+        <span class="list-all" (click)="goAllJobs()">
+          All Jobs
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngIf="resultData.data?.length > 0; else no_data">
+          <div *ngFor="let result of resultData.data" class="related-job">
+            <div class="company-logo">
+              <img [src]="result.company_logo" />
+            </div>
+            <div class="job-content">
+              <div class="company-name">
+                {{result.company}}
+              </div>
+              <div class="type">
+                {{result.title}} - {{result.type}}
+              </div>
+              <div [innerHTML]="result.description" class="description">
+              </div>
+            </div>
+            <div class="apply-btn">
+              <button class="btn btn-primary">Apply Now</button>
+              <!-- {{result.how_to_apply}} -->
+            </div>
+          </div>
+        </div>
+        <ng-template #no_data>
+          <div class="no-data">
+            There is no related jobs with {{resultData.jobTitle}}
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <ng-template #loading_bar>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+  </ng-template>
+</div>

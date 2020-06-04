@@ -1,0 +1,16 @@
+<div class="search-page">
+  <div class="list-all" (click)="goAllJobs()">
+    List All Jobs
+  </div>
+  <div class="container">
+    <div class="search-form">
+      <div class="title mb-5">Find A Job</div>
+      <form [formGroup]="searchForm" (ngSubmit)="search()" id="searchForm" ngNativeValidate>
+        <input class="form-control" formControlName="title" type="text" placeholder="Job Title" ngModel autofocus
+          required>
+        <input class="form-control" formControlName="location" type="text" placeholder="Location" ngModel>
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</div>
